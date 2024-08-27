@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@keyframes bg-animation {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    background-image: linear-gradient(
+        135deg,
+        hsl(0deg 0% 0%) 0%,
+        hsl(0deg 0% 0%) 9%,
+        hsl(0deg 0% 0%) 18%,
+        hsl(0deg 0% 0%) 27%,
+        hsl(240deg 100% 2%) 36%,
+        hsl(240deg 100% 7%) 45%,
+        hsl(240deg 100% 13%) 55%,
+        hsl(240deg 100% 18%) 64%,
+        hsl(241deg 98% 22%) 73%,
+        hsl(243deg 97% 24%) 82%,
+        hsl(245deg 96% 27%) 91%,
+        hsl(247deg 93% 30%) 100%
+);
+    
+    background-repeat: no-repeat;
+    overscroll-behavior: none;
+    font-family: "Inter", sans-serif;
+}
+
+.header{
+    margin: 3em;
+}
+
+.nav{
+    display: flex;
+    background: linear-gradient(
+        90deg,#7e7e7e 0%,
+        #e3e3e3 25%,
+        #787878 50%,
+        #e3e3e3 75%,
+        #7e7e7e 100%
+    );
+    background-size: 400% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    animation: bg-animation 5s linear infinite alternate;
+}
+
+.nav span{
+    font-size: 25px;
+    font-weight:700;
+    background-size: 130%;
+    text-shadow: 0 0 20px #787878;
+    font-family: "Chakra Petch", 'Courier New', Courier, monospace;  
+    font-weight: 500;
+}
+
+.nav ul{
+    cursor: pointer;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-family: "Chakra Petch", 'Courier New', Courier, monospace;
+    font-size: 20px;
+    opacity: 0.75;
+    background: linear-gradient(
+        90deg,#7e7e7e 0%,
+        #e3e3e3 25%,
+        #787878 50%,
+        #e3e3e3 75%,
+        #7e7e7e 100%
+    );
+    background-size: 400% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bg-animation 5s linear infinite alternate;
+}
+
+.nav ul a{
+    display: block;
+    padding: 10px;
+   
+}
+
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero{
+    padding: 4em;
+    opacity: 0.75;
+    flex-direction: column;
+    background: linear-gradient(
+        90deg,#7e7e7e 0%,
+        #e3e3e3 25%,
+        #787878 50%,
+        #e3e3e3 75%,
+        #7e7e7e 100%
+        );
+    background-size: 400% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bg-animation 10s linear infinite alternate;
+}
+
+.hero h1{
+    width: 100%;
+    font-weight: 500;
+    font-size: 135px;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.hero h2{
+    width: 100%;
+    font-weight: 500;
+    font-size: 70px;
+}
+
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(
+        90deg,#7e7e7e 0%,
+        #e3e3e3 25%,
+        #787878 50%,
+        #e3e3e3 75%,
+        #7e7e7e 100%
+        );
+        background-size: 400% ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer span{
+    text-shadow: 0 0 20px #787878;
+}
+
