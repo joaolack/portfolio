@@ -41,12 +41,9 @@ html, body{
     background-color: #000;
     overscroll-behavior: none;
     font-family: "Baloo Thambi 2", sans-serif;
+    min-height: 100vh;
 }
 
-main{
-  flex: 1;
-  border: 0;
-}
 
 
 
@@ -188,7 +185,7 @@ button span{
 }
 
 .sobre-container{
-    height: 100vh;
+  flex: 1 1 0;
 }
 
 
@@ -308,41 +305,187 @@ button span{
     transition-delay: 0.1s;
   }
 
-     
+.contato-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid grey;
+  margin-top: 100px;
+  min-height: 100px;
+}
 
+.contato-container h2{
+  display: flex;
+  padding-left: 50px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contato-child{
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  margin: 0px auto;
+}
+
+.content-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 100px;
+  padding-top: 20px;
+  margin: 0px auto;
+}
+
+.content-wrapper .contacts{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.content-wrapper .contacts article{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+.content-wrapper .contacts article span{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.content-wrapper .contacts article a {
+  width: fit-content;
+    font-size: 1.2rem;
+    color: white;  
+}
+
+.contato-container span{
+  color: #e3e3e3;
+}
+
+.contacts-btn{
+  background-color: #0138C8;
+    border:  1px solid #0138C8;
+    padding: 12px 20px;
+    border-radius: 7px;
+    transition: .3s;
+    color: #fff;
+    box-shadow: 0px 14px 56px -11px #0138C8;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.contacts-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.or{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+  
+.social{
+  display: grid;
+  place-items: center;
+}
+
+.socials-container{
+  display: flex;
+  gap: 20px;
+}
+
+.socials-container a{
+  background-color: #0138C8;
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow:  0px 14px 56px -11px #0138C8;
+}
+
+.socials-container a svg{
+  height: 32px;
+  fill: #fff;
+}
+
+.socials-container a::before{
+  content: attr(data-social);
+  position: absolute;
+  background-color: #0138C8;
+  color: #e3e3e3;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms ease-in-out;
+}
+
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a::after{
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #0138C8;
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+}
+
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
+
+.bottom{
+  margin-left: 170px;
+  margin-right: 170px;
+
+}
 
 .footer{
-    bottom: 0;
-    color:#fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 25px;
-    max-height: 20px;
-    border-top: 1px solid snow;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  bottom: 0;
+  margin-top: 70px;
+  border-top: 1px solid grey;
+     
 }
 
 .footer p{
-  padding-top: 15px;
+  color: grey;
+  font-size: 1rem;
 }
 
 
 
-@media screen and (max-width: 320px) {
-   
-    .container {
-      margin-inline: 1rem;
-    }
-    .card__article {
-      padding: 2rem 1rem;
-    }
-    .card__scale-1 {
-      top: 2rem;
-    }
-    .card__scale-2 {
-      top: 3rem;
-    }
-}
+
+
+
+
+
 
   @media screen and (min-width: 576px) {
     .hero h1{
@@ -357,7 +500,7 @@ button span{
     }
     
     .card__container {
-      grid-template-columns: 328px;
+      grid-template-columns: 308px;
     }
 }
 
@@ -380,13 +523,9 @@ button span{
         height: 100vh;
     }
 
-    .contato-container{
-      height: 100vh;
-  
-
-    }
 }
   
+
   
   @media screen and (min-width: 1120px) {
     
@@ -413,5 +552,12 @@ button span{
     }
     .card__article {
       padding: 4.5rem 2rem 3.5rem;
+    }
+    .contato-child{
+      padding: 0px 20px;
+      max-width: 1150px;
+    }
+    .content-wrapper{
+      padding: 0px 20px;
     }
 }
