@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 @keyframes bg-animation {
     0%{
@@ -16,31 +16,43 @@
     box-sizing: border-box;
 }
 
-html, body{
-    scroll-behavior: smooth;
-    background-image: linear-gradient(
-        135deg,
-        hsl(0deg 0% 0%) 0%,
-        hsl(0deg 0% 0%) 9%,
-        hsl(0deg 0% 0%) 18%,
-        hsl(0deg 0% 0%) 27%,
-        hsl(240deg 100% 2%) 36%,
-        hsl(240deg 100% 7%) 45%,
-        hsl(240deg 100% 13%) 55%,
-        hsl(240deg 100% 18%) 64%,
-        hsl(241deg 98% 22%) 73%,
-        hsl(243deg 97% 24%) 82%,
-        hsl(245deg 96% 27%) 91%,
-        hsl(247deg 93% 30%) 100%
-);
+:root {
+    --white-color: #fff;
+    --black-color: hsl(210, 12%, 15%);
+    --body-color: hsl(210, 16%, 12%);
+    --container-color: hsl(210, 24%, 8%);
     
-    background-repeat: no-repeat;
-    overscroll-behavior: none;
-    font-family: "Inter", sans-serif;
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
 }
 
+  @media screen and (min-width: 1024px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --normal-font-size: 1rem;
+    }
+}
+
+
+
+html, body{
+    scroll-behavior: smooth;
+    background-color: #000;
+    overscroll-behavior: none;
+    font-family: "Baloo Thambi 2", sans-serif;
+}
+
+main{
+  flex: 1;
+  border: 0;
+}
+
+
+
 .header{
-    margin: 3em;
+    margin: 2em;
+
 }
 
 .nav{
@@ -62,12 +74,13 @@ html, body{
 }
 
 .nav span{
-    font-size: 25px;
+    font-size: 30px;
     font-weight:700;
     background-size: 130%;
     text-shadow: 0 0 20px #787878;
-    font-family: "Chakra Petch", 'Courier New', Courier, monospace;  
+    font-family: "Baloo Thambi 2", sans-serif, monospace ;
     font-weight: 500;
+    
 }
 
 .nav ul{
@@ -75,8 +88,9 @@ html, body{
     display: flex;
     gap: 30px;
     list-style: none;
-    font-family: "Chakra Petch", 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-family: "Baloo Thambi 2";
+    font-size: 25px;
+    font-weight: bold;
     opacity: 0.75;
     background: linear-gradient(
         90deg,#7e7e7e 0%,
@@ -94,18 +108,16 @@ html, body{
 
 .nav ul a{
     display: block;
-    padding: 10px;
-   
+    padding: 10px;   
 }
 
 .hero-container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .hero{
+  
     padding: 4em;
     opacity: 0.75;
     flex-direction: column;
@@ -126,49 +138,280 @@ html, body{
 .hero h1{
     width: 100%;
     font-weight: 500;
-    font-size: 135px;
+    font-size: 11rem;
     letter-spacing: -0.05em;
-    line-height: 1;
+    line-height: 0.7;
 }
 
 .hero h2{
     width: 100%;
     font-weight: 500;
-    font-size: 70px;
+    font-size: 7rem;
 }
 
-
-.about-container{
+.hero-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-btn span{
+  gap: 4px;
+}
+
+button{
+    background-color: #0138C8;
+    border:  1px solid #0138C8;
+    padding: 12px 20px;
+    border-radius: 7px;
+    transition: .3s;
+    color: #fff;
+    box-shadow: 0px 14px 56px -11px #0138C8;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+button:hover{
+    border: 1px solid #0138C8;
+    background-color: transparent;
+    color: #fff;
+}
+
+button span{
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-family: "Baloo Thambi 2", sans-serif;
+}
+
+.sobre-container{
     height: 100vh;
 }
 
 
+.container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+}
+  
+  .card__container, .card__article {
+    display: grid;
+    gap: 2rem;
+}
+
+  .card__container {
+    padding-block: 4.5rem;
+}
+
+.card__article {
+    --hue-1: 210;
+    --hue-2: 238;
+    position: relative;
+    justify-items: center;
+    color: var(--white-color);
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    border: 4px solid transparent;
+    background: linear-gradient(var(--container-color), var(--container-color)) padding-box, linear-gradient(135deg, hsl(var(--hue-1), 85%, 70%) 0%, var(--container-color), var(--container-color), hsl(var(--hue-2), 70%, 55%) 100%) border-box;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.card__shape-1 {
+    position: relative;
+    width: 148px;
+    height: 148px;
+    background: linear-gradient(140deg, hsl(var(--hue-1), 75%, 25%) 3%, hsl(var(--hue-2), 65%, 45%) 100%);
+    border-radius: 2rem;
+    z-index: 2;
+}
+
+.card__shape-2 {
+    width: 116px;
+    height: 116px;
+    background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
+    border-radius: 1.5rem;
+}
+
+  .card__shape-3 {
+    width: 76px;
+    height: 76px;
+    background: linear-gradient(140deg, hsl(var(--hue-1), 85%, 60%) 3%, hsl(var(--hue-2), 85%, 60%) 100%);
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+  .card__shape-2, .card__shape-3 {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.card__green {
+    --hue-1: 180;
+    --hue-2: 50;
+}
+
+.card__orange{
+  --hue-1: 10;
+}
+
+.card__icon {
+    font-size: 4rem;
+}
+
+
+  .card__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+  .card__description {
+    margin-bottom: 5px;
+}
+
+.card__data{
+  z-index: 3;
+}
+
+ 
+.card__scale-1 {
+    width: 148px;
+    height: 148px;
+    background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
+    border-radius: 2rem;
+    top: 4rem;
+  }
+  .card__scale-2 {
+    width: 116px;
+    height: 116px;
+    background: var(--container-color);
+    border-radius: 1.5rem;
+    top: 5rem;
+  }
+  .card__scale-1, .card__scale-2 {
+    position: absolute;
+    filter: blur(24px);
+    transition: transform 0.3s ease-in;
+  }
+  .card__article:hover .card__scale-1 {
+    transform: scale(6);
+  }
+  .card__article:hover .card__scale-2 {
+    transform: scale(6);
+    transition-delay: 0.1s;
+  }
+
+     
+
+
 .footer{
+    bottom: 0;
+    color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 0;
-    left: 0;
-    height: 40px;
-    position: fixed;
-    width: 100%;
-    background: linear-gradient(
-        90deg,#7e7e7e 0%,
-        #e3e3e3 25%,
-        #787878 50%,
-        #e3e3e3 75%,
-        #7e7e7e 100%
-        );
-        background-size: 400% ;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 25px;
+    max-height: 20px;
+    border-top: 1px solid snow;
 }
 
-.footer span{
-    text-shadow: 0 0 20px #787878;
+.footer p{
+  padding-top: 15px;
 }
 
+
+
+@media screen and (max-width: 320px) {
+   
+    .container {
+      margin-inline: 1rem;
+    }
+    .card__article {
+      padding: 2rem 1rem;
+    }
+    .card__scale-1 {
+      top: 2rem;
+    }
+    .card__scale-2 {
+      top: 3rem;
+    }
+}
+
+  @media screen and (min-width: 576px) {
+    .hero h1{
+      font-size: 9rem;
+      width: 100%;
+      letter-spacing: -0.05;
+    }
+    .hero h2{
+      font-size: 5rem;
+      width: 100%;
+      line-height: 1;
+    }
+    
+    .card__container {
+      grid-template-columns: 328px;
+    }
+}
+
+  @media screen and (min-width: 768px) {
+    .hero h1{
+      font-size: 10rem;
+      width: 100%;
+      letter-spacing: -0.05;
+    }
+    .hero h2{
+      font-size: 6rem;
+      width: 100%;
+      line-height: 1;
+    }
+    .card__container {
+      grid-template-columns: repeat(2, 328px);
+
+    }
+    .sobre-container{
+        height: 100vh;
+    }
+
+    .contato-container{
+      height: 100vh;
+  
+
+    }
+}
+  
+  
+  @media screen and (min-width: 1120px) {
+    
+    .hero h1{
+      font-size: 12rem;
+      width: 100%;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+    .hero h2{
+      font-size: 7rem;
+      width: 100%;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .sobre-container{
+        height: 100vh;
+    }
+    .container {
+      height: 100vh;
+    }
+    .card__container {
+      grid-template-columns: repeat(3, 345px);
+    }
+    .card__article {
+      padding: 4.5rem 2rem 3.5rem;
+    }
+}
