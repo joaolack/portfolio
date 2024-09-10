@@ -194,6 +194,11 @@ button span{
     font-family: "Baloo Thambi 2", sans-serif;
 }
 
+button span a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .sobre-container{
   flex: 1 1 0;
 }
@@ -289,31 +294,68 @@ button span{
 }
 
 .card__scale-1 {
-    width: 148px;
-    height: 148px;
-    background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
-    border-radius: 2rem;
-    top: 4rem;
-  }
-  .card__scale-2 {
-    width: 116px;
-    height: 116px;
-    background: var(--container-color);
-    border-radius: 1.5rem;
-    top: 5rem;
-  }
-  .card__scale-1, .card__scale-2 {
-    position: absolute;
-    filter: blur(24px);
-    transition: transform 0.3s ease-in;
-  }
-  .card__article:hover .card__scale-1 {
-    transform: scale(6);
-  }
-  .card__article:hover .card__scale-2 {
-    transform: scale(6);
-    transition-delay: 0.1s;
-  }
+  width: 148px;
+  height: 148px;
+  background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
+  border-radius: 2rem;
+  top: 4rem;
+}
+
+.card__scale-2 {
+  width: 116px;
+  height: 116px;
+  background: var(--container-color);
+  border-radius: 1.5rem;
+  top: 5rem;
+}
+
+.card__scale-1, .card__scale-2 {
+  position: absolute;
+  filter: blur(24px);
+  transition: transform 0.3s ease-in;
+}
+
+.card__article:hover .card__scale-1 {
+  transform: scale(6);
+}
+
+.card__article:hover .card__scale-2 {
+  transform: scale(6);
+  transition-delay: 0.1s;
+}
+
+.portfolio{
+  height: 600px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio_title{
+  display: flex;
+  padding-left: 100px;
+  font-size: 30px;
+  font-family: 'Baloo Thambi 2';
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.portfolio-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 500px;
+  background-color: #0138C8;
+  box-shadow: 0px 14px 56px -11px #0138C8;
+  border-radius: 2.5rem;
+}
+
+.portfolio-container h2{
+  font-size: 4rem;
+  font-family: 'Baloo Thambi 2';
+  color: #fff;
+}
 
 
 .contato-container{
@@ -608,6 +650,24 @@ button span{
     .content-wrapper .contacts article a{
       font-size: 16px;
     }
+
+    .portfolio_title{
+      padding-left: 30px;
+    }
+
+    .portfolio-container{
+      width: 95%;
+      height: 400px;
+    }
+
+    .portfolio-container h2{
+      font-size: 1.5rem;
+    }
+
+    .portfolio{
+      height: 500px;
+    }
+    
   }
 
 
@@ -660,6 +720,23 @@ button span{
 
     .content-wrapper .contacts article a{
       font-size: 16px;
+    }
+
+    .portfolio_title{
+      padding-left: 30px;
+    }
+
+    .portfolio-container{
+      width: 95%;
+      height: 400px;
+    }
+
+    .portfolio-container h2{
+      font-size: 1.5rem;
+    }
+
+    .portfolio{
+      height: 500px;
     }
 
   }
